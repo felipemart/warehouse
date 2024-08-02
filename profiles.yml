@@ -1,4 +1,4 @@
-datawarehouse:
+datewarehouse:
   target: dev
   outputs:
     dev:
