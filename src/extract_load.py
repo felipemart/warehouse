@@ -18,7 +18,7 @@ engine = create_engine(DATABASE_URL)
 
 commodities = ["CL=F", "GC=F", "HG=F", "SI=F", "ZC=F"]
 
-def buscar_dados_commodities(tickers, periodo='5d', intervalo='1d'):
+def buscar_dados_commodities(tickers, periodo='5y', intervalo='1d'):
     ticker = yf.Ticker(tickers)
     dados =ticker.history(period=periodo, interval=intervalo)[['Close']]
     dados['Ticker'] = tickers
